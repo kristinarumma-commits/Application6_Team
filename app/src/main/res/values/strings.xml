@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">My Application6</string>
     <string name="hello_blank_fragment">Экран заглушки</string>
+
+<!-- Названия -->
+<string name="title_tomato">Помидор</string>
+
+<!-- Описания -->
+<string name="desc_tomato">Помидор — сочный и вкусный овощ, богатый витаминами. Идеален для салатов и соусов.</string>
+<!-- Меню -->
+<string name="menu_tomato">Помидор</string>
 </resources>

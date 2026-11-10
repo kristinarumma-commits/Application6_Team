@@ -37,26 +37,6 @@
     </ScrollView>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="16dp">
 
-        <Button
-            android:id="@+id/btn_to_beet"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/menu_beet"
-            android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
-
-        <Button
-            android:id="@+id/btn_to_cucumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/menu_cucumber"
-            android:textSize="18sp"/>
-    </LinearLayout>
 
 </LinearLayout>

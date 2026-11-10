@@ -28,6 +28,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:labelVisibilityMode="labeled"
+       app:itemActiveIndicatorStyle="@null"
         app:menu="@menu/team_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
