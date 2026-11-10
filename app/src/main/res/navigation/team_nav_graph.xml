@@ -12,11 +12,10 @@
         tools:layout="@layout/fragment_formulas" />
 
     <fragment
-        android:id="@+id/TrigonometryFragment"
-        android:name="com.example.myapplication6.TrigonometryFragment"
-        android:label="Основы тригонометрии"
-        tools:layout="@layout/fragment_trigonometry" />
-
+        android:id="@+id/TomatoFragment"
+        android:name="com.example.myapplication6.TomatoFragment"
+        android:label="Помидор"
+        tools:layout="@layout/fragment_tomato" />
     <fragment
         android:id="@+id/PowersFragment"
         android:name="com.example.myapplication6.PowersFragment"

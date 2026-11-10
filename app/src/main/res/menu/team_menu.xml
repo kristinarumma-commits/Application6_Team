@@ -8,9 +8,9 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/TrigonometryFragment"
-        android:title="cos²α"
-        app:showAsAction="never" />
+        android:id="@+id/TomatoFragment"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:title="Помидор" />
 
     <item
         android:id="@+id/PowersFragment"
