@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/team_nav_graph"
+    app:startDestination="@id/FormulasFragment">
+
+    <fragment
+        android:id="@+id/FormulasFragment"
+        android:name="com.example.myapplication6.FormulasFragment"
+        android:label="a² − b²"
+        tools:layout="@layout/fragment_formulas" />
+
+    <fragment
+        android:id="@+id/TrigonometryFragment"
+        android:name="com.example.myapplication6.TrigonometryFragment"
+        android:label="Основы тригонометрии"
+        tools:layout="@layout/fragment_trigonometry" />
+
+    <fragment
+        android:id="@+id/PowersFragment"
+        android:name="com.example.myapplication6.PowersFragment"
+        android:label="Формулы со степенями"
+        tools:layout="@layout/fragment_powers" />
+
+</navigation>

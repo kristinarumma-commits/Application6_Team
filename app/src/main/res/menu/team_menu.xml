@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/FormulasFragment"
+        android:title="a² − b²"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/TrigonometryFragment"
+        android:title="cos²α"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/PowersFragment"
+        android:title="√a"
+        app:showAsAction="never" />
+
+</menu>
