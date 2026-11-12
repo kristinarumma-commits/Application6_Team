@@ -1,0 +1,157 @@
+Index: app/src/main/java/com/example/myapplication6/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.myapplication6;\r\n\r\nimport android.os.Bundle;\r\nimport android.view.Menu;\r\nimport android.view.MenuItem;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\nimport androidx.appcompat.widget.Toolbar;\r\nimport androidx.navigation.NavController;\r\nimport androidx.navigation.fragment.NavHostFragment;\r\nimport androidx.navigation.ui.AppBarConfiguration;\r\nimport androidx.navigation.ui.NavigationUI;\r\nimport com.google.android.material.bottomnavigation.BottomNavigationView;\r\n\r\npublic class MainActivity extends AppCompatActivity {\r\n\r\n    private NavController navController;\r\n    private AppBarConfiguration appBarConfiguration;\r\n    private BottomNavigationView bottomNavigation;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_main);\r\n\r\n        Toolbar toolbar = findViewById(R.id.toolbar);\r\n        setSupportActionBar(toolbar);\r\n\r\n        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()\r\n                .findFragmentById(R.id.nav_host_fragment);\r\n        navController = navHostFragment.getNavController();\r\n\r\n\r\n        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();\r\n\r\n\r\n        NavigationUI.setupWithNavController(toolbar, navController, appBarConfiguration);\r\n\r\n        bottomNavigation = findViewById(R.id.bottomNavigation);\r\n        bottomNavigation.setItemIconTintList(null);\r\n        NavigationUI.setupWithNavController(bottomNavigation, navController);\r\n    }\r\n\r\n    @Override\r\n    public boolean onCreateOptionsMenu(Menu menu) {\r\n        getMenuInflater().inflate(R.menu.main_menu, menu);\r\n        return true;\r\n    }\r\n\r\n    @Override\r\n    public boolean onOptionsItemSelected(MenuItem item) {\r\n\r\n        return NavigationUI.onNavDestinationSelected(item, navController) || super.onOptionsItemSelected(item);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/myapplication6/MainActivity.java b/app/src/main/java/com/example/myapplication6/MainActivity.java
+--- a/app/src/main/java/com/example/myapplication6/MainActivity.java	(revision a04aa0eebdfb1b5975d0ffae29199d91944db64b)
++++ b/app/src/main/java/com/example/myapplication6/MainActivity.java	(date 1794508797488)
+@@ -6,6 +6,7 @@
+ import androidx.appcompat.app.AppCompatActivity;
+ import androidx.appcompat.widget.Toolbar;
+ import androidx.navigation.NavController;
++import androidx.navigation.Navigation;
+ import androidx.navigation.fragment.NavHostFragment;
+ import androidx.navigation.ui.AppBarConfiguration;
+ import androidx.navigation.ui.NavigationUI;
+@@ -27,28 +28,29 @@
+ 
+         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
+                 .findFragmentById(R.id.nav_host_fragment);
+-        navController = navHostFragment.getNavController();
++         navController = navHostFragment.getNavController();
+ 
+ 
+-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
++         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
+ 
+ 
+         NavigationUI.setupWithNavController(toolbar, navController, appBarConfiguration);
+ 
+         bottomNavigation = findViewById(R.id.bottomNavigation);
+-        bottomNavigation.setItemIconTintList(null);
+         NavigationUI.setupWithNavController(bottomNavigation, navController);
+     }
+ 
+     @Override
+     public boolean onCreateOptionsMenu(Menu menu) {
+         getMenuInflater().inflate(R.menu.main_menu, menu);
+-        return true;
++        return super.onCreateOptionsMenu(menu);
+     }
+ 
+     @Override
+     public boolean onOptionsItemSelected(MenuItem item) {
+ 
+-        return NavigationUI.onNavDestinationSelected(item, navController) || super.onOptionsItemSelected(item);
++        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
++        navController.navigate(item.getItemId());
++        return super.onOptionsItemSelected(item);
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/java/com/example/myapplication6/FormulasFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\npackage com.example.myapplication6;\r\n\r\nimport androidx.fragment.app.Fragment;\r\n\r\npublic class FormulasFragment extends Fragment {\r\n\r\n    public FormulasFragment() {\r\n        super(R.layout.fragment_formulas);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/myapplication6/FormulasFragment.java b/app/src/main/java/com/example/myapplication6/FormulasFragment.java
+--- a/app/src/main/java/com/example/myapplication6/FormulasFragment.java	(revision a04aa0eebdfb1b5975d0ffae29199d91944db64b)
++++ b/app/src/main/java/com/example/myapplication6/FormulasFragment.java	(date 1794498150838)
+@@ -1,11 +1,18 @@
+ 
+ package com.example.myapplication6;
+ 
++import android.os.Bundle;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
+ import androidx.fragment.app.Fragment;
+ 
+ public class FormulasFragment extends Fragment {
+ 
+-    public FormulasFragment() {
+-        super(R.layout.fragment_formulas);
++    @Override
++    public View onCreateView(LayoutInflater inflater, ViewGroup container,
++                             Bundle savedInstanceState) {
++        return inflater.inflate(R.layout.fragment_formulas, container, false);
+     }
+ }
+Index: app/src/main/java/com/example/myapplication6/PowersFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.myapplication6;\r\n\r\nimport androidx.fragment.app.Fragment;\r\n\r\npublic class PowersFragment extends Fragment {\r\n\r\n    public PowersFragment() {\r\n        super(R.layout.fragment_powers);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/myapplication6/PowersFragment.java b/app/src/main/java/com/example/myapplication6/PowersFragment.java
+--- a/app/src/main/java/com/example/myapplication6/PowersFragment.java	(revision a04aa0eebdfb1b5975d0ffae29199d91944db64b)
++++ b/app/src/main/java/com/example/myapplication6/PowersFragment.java	(date 1794498150792)
+@@ -1,10 +1,17 @@
+ package com.example.myapplication6;
+ 
++import android.os.Bundle;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++
+ import androidx.fragment.app.Fragment;
+ 
+ public class PowersFragment extends Fragment {
+ 
+-    public PowersFragment() {
+-        super(R.layout.fragment_powers);
++    @Override
++    public View onCreateView(LayoutInflater inflater, ViewGroup container,
++                             Bundle savedInstanceState) {
++        return inflater.inflate(R.layout.fragment_powers, container, false);
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/java/com/example/myapplication6/MainActivity2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.myapplication6;\r\n\r\nimport android.os.Bundle;\r\nimport android.view.Menu;\r\nimport android.view.MenuItem;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\nimport androidx.appcompat.widget.Toolbar;\r\nimport androidx.drawerlayout.widget.DrawerLayout;\r\nimport androidx.navigation.NavController;\r\nimport androidx.navigation.fragment.NavHostFragment;\r\nimport androidx.navigation.ui.AppBarConfiguration;\r\nimport androidx.navigation.ui.NavigationUI;\r\nimport com.google.android.material.navigation.NavigationView;\r\n\r\npublic class MainActivity2 extends AppCompatActivity {\r\n\r\n    private NavController navController;\r\n    private AppBarConfiguration appBarConfiguration;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_main2);\r\n\r\n        Toolbar toolbar = findViewById(R.id.toolbar);\r\n        setSupportActionBar(toolbar);\r\n\r\n        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);\r\n        navController = navHostFragment.getNavController();\r\n\r\n        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);\r\n        NavigationView navigationView = findViewById(R.id.nav_view);\r\n\r\n        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).setOpenableLayout(drawerLayout).build();\r\n\r\n        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);\r\n        NavigationUI.setupWithNavController(navigationView, navController);\r\n    }\r\n\r\n    @Override\r\n    public boolean onCreateOptionsMenu(Menu menu) {\r\n        getMenuInflater().inflate(R.menu.main_menu, menu);\r\n        return true;\r\n    }\r\n\r\n    @Override\r\n    public boolean onOptionsItemSelected(MenuItem item) {\r\n        return NavigationUI.onNavDestinationSelected(item, navController) || super.onOptionsItemSelected(item);\r\n    }\r\n\r\n    @Override\r\n    public boolean onSupportNavigateUp() {\r\n        return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/myapplication6/MainActivity2.java b/app/src/main/java/com/example/myapplication6/MainActivity2.java
+--- a/app/src/main/java/com/example/myapplication6/MainActivity2.java	(revision a04aa0eebdfb1b5975d0ffae29199d91944db64b)
++++ b/app/src/main/java/com/example/myapplication6/MainActivity2.java	(date 1794509236259)
+@@ -7,6 +7,7 @@
+ import androidx.appcompat.widget.Toolbar;
+ import androidx.drawerlayout.widget.DrawerLayout;
+ import androidx.navigation.NavController;
++import androidx.navigation.Navigation;
+ import androidx.navigation.fragment.NavHostFragment;
+ import androidx.navigation.ui.AppBarConfiguration;
+ import androidx.navigation.ui.NavigationUI;
+@@ -37,17 +38,18 @@
+         NavigationUI.setupWithNavController(navigationView, navController);
+     }
+ 
+-    @Override
+     public boolean onCreateOptionsMenu(Menu menu) {
+         getMenuInflater().inflate(R.menu.main_menu, menu);
+-        return true;
++        return super.onCreateOptionsMenu(menu);
+     }
+ 
+     @Override
+     public boolean onOptionsItemSelected(MenuItem item) {
+-        return NavigationUI.onNavDestinationSelected(item, navController) || super.onOptionsItemSelected(item);
+-    }
+ 
++        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
++        navController.navigate(item.getItemId());
++        return super.onOptionsItemSelected(item);
++    }
+     @Override
+     public boolean onSupportNavigateUp() {
+         return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp();
