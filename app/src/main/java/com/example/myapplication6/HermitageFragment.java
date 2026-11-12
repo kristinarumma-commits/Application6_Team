@@ -1,21 +1,21 @@
 package com.example.myapplication6;
 
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.fragment.app.Fragment;
-
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Placeholder3Fragment#newInstance} factory method to
+ * Use the {@link HermitageFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Placeholder3Fragment extends Fragment {
+public class HermitageFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -23,8 +23,7 @@ public class Placeholder3Fragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Placeholder3Fragment() {
-        // Required empty public constructor
+    public HermitageFragment() {
     }
 
     /**
@@ -33,11 +32,11 @@ public class Placeholder3Fragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Placeholder3Fragment.
+     * @return A new instance of fragment HermitageFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static Placeholder3Fragment newInstance(String param1, String param2) {
-        Placeholder3Fragment fragment = new Placeholder3Fragment();
+    public static HermitageFragment newInstance(String param1, String param2) {
+        HermitageFragment fragment = new HermitageFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -57,7 +56,6 @@ public class Placeholder3Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_placeholder3, container, false);
+        return inflater.inflate(R.layout.fragment_hermitage, container, false);
     }
 }

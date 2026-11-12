@@ -17,9 +17,20 @@
         android:label="Помидор"
         tools:layout="@layout/fragment_tomato" />
     <fragment
-        android:id="@+id/PowersFragment"
-        android:name="com.example.myapplication6.PowersFragment"
-        android:label="Формулы со степенями"
-        tools:layout="@layout/fragment_powers" />
+        android:id="@+id/hermitageFragment"
+        android:name="com.example.myapplication6.HermitageFragment"
+        android:label="Эрмитаж"
+        tools:layout="@layout/fragment_hermitage" />
 
+    <fragment
+        android:id="@+id/BeetFragment"
+        android:name="com.example.myapplication6.BeetFragment"
+    android:label="Свекла"
+    tools:layout="@layout/fragment_beet" />
+
+    <fragment
+        android:id="@+id/cucumberFragment"
+    android:name="com.example.myapplication6.CucumberFragment"
+    android:label="Огурец"
+    tools:layout="@layout/fragment_cucumber" />
 </navigation>

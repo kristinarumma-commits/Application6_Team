@@ -15,6 +15,19 @@ public class TomatoFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_tomato, container, false);
+        View view = inflater.inflate(R.layout.fragment_tomato, container, false);
+
+        Button btnToBeet = view.findViewById(R.id.btn_to_beet);
+        Button btnToCucumber = view.findViewById(R.id.btn_to_cucumber);
+
+         btnToBeet.setOnClickListener(v ->
+
+                Navigation.findNavController(v).navigate(R.id.BeetFragment)
+        );
+
+        btnToCucumber.setOnClickListener(v ->
+                Navigation.findNavController(v).navigate(R.id.cucumberFragment)
+        );
+        return view;
     }
 }

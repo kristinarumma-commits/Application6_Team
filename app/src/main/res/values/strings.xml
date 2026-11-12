@@ -2,11 +2,26 @@
     <string name="app_name">My Application6</string>
     <string name="hello_blank_fragment">Экран заглушки</string>
 
-<!-- Названия -->
-<string name="title_tomato">Помидор</string>
+    <string name="title_tomato">Помидор</string>
+    <string name="title_beet">Свекла</string>
+    <string name="title_cucumber">Огурец</string>
 
-<!-- Описания -->
-<string name="desc_tomato">Помидор — сочный и вкусный овощ, богатый витаминами. Идеален для салатов и соусов.</string>
-<!-- Меню -->
-<string name="menu_tomato">Помидор</string>
+    <string name="desc_tomato">Помидор — сочный и вкусный овощ, богатый витаминами. Идеален для салатов и соусов.</string>
+    <string name="desc_beet">Свекла — корнеплод с насыщенным бордовым цветом. Богата железом и полезна для крови.</string>
+    <string name="desc_cucumber">Огурец — свежий и хрустящий овощ, состоящий на 95% из воды. Отлично освежает.</string>
+
+
+    <string name="menu_tomato">Помидор</string>
+    <string name="menu_beet">Свекла</string>
+    <string name="menu_cucumber">Огурец</string>
+
+    <string name="hermitage_title">Эрмитаж</string>
+    <string name="hermitage_desc">Государственный Эрмитаж — один из крупнейших художественных музеев мира, расположенный в Зимнем дворце...</string>
+    <string name="peterhof_title">Петергоф</string>
+    <string name="peterhof_desc">Петергоф — дворцово-парковый ансамбль на южном берегу Финского залива, известный своими фонтанами...</string>
+    <string name="isaac_title">Исаакиевский собор</string>
+    <string name="isaac_desc">Исаакиевский собор — крупнейший православный храм Санкт-Петербурга, выдающийся памятник архитектуры...</string>
+    <string name="menu_hermitage">Эрмитаж</string>
+    <string name="menu_peterhof">Петергоф</string>
+    <string name="menu_isaac">Исаакий</string>
 </resources>
