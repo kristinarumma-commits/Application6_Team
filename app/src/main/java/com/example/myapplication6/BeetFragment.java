@@ -22,10 +22,12 @@ public class BeetFragment extends Fragment {
         Button btnToCucumber = view.findViewById(R.id.btn_to_cucumber);
 
         btnToTomato.setOnClickListener(v ->
-                Navigation.findNavController(v).navigate(R.id.action_beet_to_tomato)
+                // Переход напрямую по ID фрагмента (без action_)
+                Navigation.findNavController(v).navigate(R.id.TomatoFragment)
         );
+
         btnToCucumber.setOnClickListener(v ->
-                Navigation.findNavController(v).navigate(R.id.action_beet_to_cucumber)
+                Navigation.findNavController(v).navigate(R.id.cucumberFragment)
         );
 
         return view;
