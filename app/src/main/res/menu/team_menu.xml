@@ -12,8 +12,8 @@
         android:title="Помидор" />
 
     <item
-        android:id="@+id/PowersFragment"
-        android:title="√a"
+        android:id="@+id/hermitageFragment"
+        android:title="Эрмитаж"
         app:showAsAction="never" />
 
 </menu>

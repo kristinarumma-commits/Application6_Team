@@ -9,4 +9,14 @@
 <string name="desc_tomato">Помидор — сочный и вкусный овощ, богатый витаминами. Идеален для салатов и соусов.</string>
 <!-- Меню -->
 <string name="menu_tomato">Помидор</string>
+
+    <string name="hermitage_title">Эрмитаж</string>
+    <string name="hermitage_desc">Государственный Эрмитаж — один из крупнейших художественных музеев мира, расположенный в Зимнем дворце...</string>
+    <string name="peterhof_title">Петергоф</string>
+    <string name="peterhof_desc">Петергоф — дворцово-парковый ансамбль на южном берегу Финского залива, известный своими фонтанами...</string>
+    <string name="isaac_title">Исаакиевский собор</string>
+    <string name="isaac_desc">Исаакиевский собор — крупнейший православный храм Санкт-Петербурга, выдающийся памятник архитектуры...</string>
+    <string name="menu_hermitage">Эрмитаж</string>
+    <string name="menu_peterhof">Петергоф</string>
+    <string name="menu_isaac">Исаакий</string>
 </resources>
