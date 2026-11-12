@@ -16,10 +16,33 @@
         android:name="com.example.myapplication6.TomatoFragment"
         android:label="Помидор"
         tools:layout="@layout/fragment_tomato" />
+
     <fragment
         android:id="@+id/hermitageFragment"
         android:name="com.example.myapplication6.HermitageFragment"
         android:label="Эрмитаж"
-        tools:layout="@layout/fragment_hermitage" />
+        tools:layout="@layout/fragment_hermitage">
+
+        <action
+            android:id="@+id/action_hermitage_to_peterhof"
+            app:destination="@id/peterhofFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/peterhofFragment"
+        android:name="com.example.myapplication6.PeterhofFragment"
+        android:label="Петергоф"
+        tools:layout="@layout/fragment_peterhof">
+
+        <action
+            android:id="@+id/action_peterhof_to_isaac"
+            app:destination="@id/isaacFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/isaacFragment"
+        android:name="com.example.myapplication6.IsaacFragment"
+        android:label="Исаакий"
+        tools:layout="@layout/fragment_isaac" />
 
 </navigation>
