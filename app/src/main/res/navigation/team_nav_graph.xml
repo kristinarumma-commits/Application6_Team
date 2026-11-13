@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/team_nav_graph"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/FormulasFragment">
 
     <fragment
@@ -10,6 +10,18 @@
         android:name="com.example.myapplication6.FormulasFragment"
         android:label="a² − b²"
         tools:layout="@layout/fragment_formulas" />
+
+    <fragment
+        android:id="@+id/TrigonometryFragment"
+        android:name="com.example.myapplication6.TrigonometryFragment"
+        android:label="cos²α"
+        tools:layout="@layout/fragment_trigonometry" />
+
+    <fragment
+        android:id="@+id/PowersFragment"
+        android:name="com.example.myapplication6.PowersFragment"
+        android:label="√a"
+        tools:layout="@layout/fragment_powers" />
 
     <fragment
         android:id="@+id/TomatoFragment"
